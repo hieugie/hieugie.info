@@ -1,18 +1,14 @@
 # Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+title:        Hiếu giề's blog
+tagline:      Something need to share for you
 baseurl:      ""
 paginate:     1
 locale:       "en"
 
 # About/contact
 author:
-  name:       Author name
-  url:        http://yourhomepage.com 
-
-# Gems
-gems:
-  - jekyll-paginate
+  name:       Hiếu Giề
+  url:        http://hieugie.info
 
 #Others
-markdown: kramdown
+markdown: HieuGie
