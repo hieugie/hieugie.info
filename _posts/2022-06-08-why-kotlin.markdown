@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Có nên học Kotlin thay vì java khi sử dụng Spring framework?"
-date:   2022-06-07 17:50:00
+date:   2022-06-08 00:00:00
 categories: Spring
 ---
 # Có nên học Kotlin thay vì java khi sử dụng Spring framework?
