@@ -2,16 +2,17 @@
 layout: default
 title:  "Bean factory vs Application Context"
 date:   2022-08-11 00:00:00
-categories: InterviewQuestion
+categories: Interview_Question
+tags: Interview Question
 ---
 
 ### Application context vs Bean Factory trong Spring giống và khác nhau như nào?
 
 Về cơ bản thì hiếm có bao giờ tôi sử dụng 2 cái interface này, và chắc hẳn nhiều bạn cũng như thế. Tuy nhiên thì trong các buổi phỏng vấn bạn vẫn có thể bị hỏi 1 câu như này.
 <br>
-Tất nhiên là bạn cũng chẳng thể trả treo lại kiểu như 
+Tất nhiên là bạn cũng chẳng thể trả treo lại kiểu như
 > Anh có dùng bao giờ không mà hỏi làm m* gì?
-
+<!-- more -->
 Thì đây là câu trả lời mà mềnh biết:
 
 ## Bean Factory:

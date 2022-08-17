@@ -12,18 +12,18 @@ Trước tiên để có cái nhìn tổng quát về microservice là gì thì 
 <br/>
 **Sam Newman** có viết trong cuốn ***<u>Building Microservices: Designing Fine-Grained Systems</u>*** thì:
 > Microservices là 1 tập hợp những service nhỏ làm việc cùng với nhau.
-
+<!-- more -->
 Còn theo như **James Lewis and Martin Fowler**
 > Kiểu kiến trúc Microservices là 1 phương pháp tiếp cận việc phát triển 1 ứng dụng đơn lẻ từ 1 bộ các service nhỏ.
 > Trong đó mỗi service sẽ tự chạy các tiến trình riêng của chính nó và giao tiếp với nhau theo 1 cơ chế đơn giản.
 > Các services này được xây dựng dựa trên nghiệp vụ mong muốn và có  triển khai tự động 1 các độc lập.
 
-Tổng kết lại thì cái tên nó cũng đã nói lên phần nào cái định nghĩa của chính nó. Thay vì chúng ta xây dựng 1 ứng dụng 
+Tổng kết lại thì cái tên nó cũng đã nói lên phần nào cái định nghĩa của chính nó. Thay vì chúng ta xây dựng 1 ứng dụng
 lớn thì chia nó thành nhiều phần nhỏ khác nhau và có thể hoạt động tương tác với nhau 1 cách hợp lý.
 
 ### Nguyên tắc xây dựng Microservices
 Về cơ bản thì để xây dựng một kiến trúc gì đó thì chúng ta đều phải có những nguyên tắc nhất định phải tuân theo.
-Nó giúp chúng ta đưa ra những quyết định đúng đắn hơn, đúng chuẩn hơn. Hãy cùng điểm qua các nguyên tắc trong việc 
+Nó giúp chúng ta đưa ra những quyết định đúng đắn hơn, đúng chuẩn hơn. Hãy cùng điểm qua các nguyên tắc trong việc
 xây dựng Microservices.
 
 1. **Single responsibility principle.**
@@ -39,7 +39,7 @@ xây dựng Microservices.
 > cho việc phát hiện cũng như khôi phục lại các service bị chết.
 
 4. **Infrastructure Automation**
-> Tự động hoá cơ sở hạ tầng là quá trình tạo các mã để cấu hình môi trường, việc này sẽ giúp chúng ta áp dụng các 
+> Tự động hoá cơ sở hạ tầng là quá trình tạo các mã để cấu hình môi trường, việc này sẽ giúp chúng ta áp dụng các
 > cấu hình giống nhau cho 1 node hoặc hàng chục, trăm nodes, đơn giản hoá trong việc triển khai và scale.
 
 5. **Deploy independently**
@@ -56,7 +56,7 @@ Về ưu điểm thì hầu hết sẽ liên quan đến việc code base của 
 
 > Code base nhỏ sẽ giúp cho việc đọc hiểu 1 service dễ dàng hơn, dễ dàng trong việc kiểm thử, bảo trì cũng như nâng cấp các tính năng hơn
 
-> Vì Microservice là độc lập sẽ giúp việc triển khai dễ dàng hơn, nó cũng cho phép nhiều team có thể tham gia vào việc phát triển 
+> Vì Microservice là độc lập sẽ giúp việc triển khai dễ dàng hơn, nó cũng cho phép nhiều team có thể tham gia vào việc phát triển
 
 > Bởi thì triển khai độc lập nó sẽ giúp việc scale 1 cách dễ dàng hơn, ít tốn tài nguyên hơn do chỉ cần scale những Microservices cần thiệt
 
@@ -78,6 +78,6 @@ Về ưu điểm thì hầu hết sẽ liên quan đến việc code base của 
 > giữa các service với nhau.
 
 ### Tổng kết
-Như những gì đã lướt qua bên trên có thể thấy, Microservice có rất nhiều ưu điểm cũng như khuyết điểm. Chúng ta đều có 
-thể thấy những ưu điểm vượt trội của microservice hơn so với monolithic, tuy nhiên thì đi kèm với đó bạn cũng phải 
+Như những gì đã lướt qua bên trên có thể thấy, Microservice có rất nhiều ưu điểm cũng như khuyết điểm. Chúng ta đều có
+thể thấy những ưu điểm vượt trội của microservice hơn so với monolithic, tuy nhiên thì đi kèm với đó bạn cũng phải
 trade off nhiều thứ. Hãy cân nhắc kỹ lưỡng trước khi lựa chọn kiến trúc phù hợp cho dự án của mình.

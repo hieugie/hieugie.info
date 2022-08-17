@@ -1,11 +1,61 @@
-# Setup
-title:        Hiếu giề's blog
-tagline:      Một chiếc blog ghi lại những gì muốn chia sẻ
-baseurl:      ""
-paginate:     1
-locale:       "en"
+# Site Info
+title: Hiếu giề
+tagline: 'Một chiếc blog ghi lại những gì muốn chia sẻ'
+description: 'Một chiếc blog ghi lại những gì muốn chia sẻ'
+baseurl: ""
+url: http://hieugie.github.io
+logo: '/public/logo.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+version: 1.0.0
 
 # About/contact
 author:
-  name:       Hiếu Giề
-  url:        http://hieugie.info
+  name: Hiếu Giề
+  description: I'm something of a sicientist mysefl
+  gravatar: 40224e1e66a92d0c09753af65cbccb8d # md5 hash of your email address
+  contact:
+    linkedin:  https://www.linkedin.com/in/hi%E1%BA%BFu-%C4%91%C3%A0o-35137010b
+    github:    https://github.com/hieugie
+    # facebook:  <hide>
+    email:     hieudtse02895@gmail.com
+
+# Navigation (2nd level links supported)
+nav:
+  Home:
+    - '/'
+  Blog:
+    - '/blog/'
+    - { Categories: '/blog/categories/' }
+#    - { Tags: '/blog/tags/' }
+  About:
+    - '/about/'
+  Github Project:
+    - 'https://github.com/hieugie'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: '' # leave blank if you don't want google analytics
+disqus_short_name: '' # leave blank if you don't want disqus
+
