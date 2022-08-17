@@ -2,7 +2,7 @@
 layout: default
 title:  "Có nên học Kotlin thay vì java khi sử dụng Spring framework?"
 date:   2022-06-08 00:00:00
-categories: Spring
+categories: Kotlin
 ---
 # Có nên học Kotlin thay vì java khi sử dụng Spring framework?
 Trước đây khi tiếp cận lần đầu tiên với Java mềnh đã nghĩ rằng:

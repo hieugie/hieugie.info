@@ -36,7 +36,7 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:
-    - '/'
+    - '/blog'
   Blog:
     - '/blog/'
     - { Categories: '/blog/categories/' }
@@ -57,5 +57,6 @@ hero:
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: '' # leave blank if you don't want google analytics
-disqus_short_name: '' # leave blank if you don't want disqus
+disqus_short_name: 'hieugie' # leave blank if you don't want disqus
 
+plugins: [jekyll-paginate]

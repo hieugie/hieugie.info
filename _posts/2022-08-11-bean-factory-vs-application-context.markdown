@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Bean factory vs Application Context"
 date:   2022-08-11 00:00:00
 categories: Interview_Question
