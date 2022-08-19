@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: post
 title:  "Ưu điểm và nhược điểm của Microservices"
 date:   2022-06-07 00:00:00
 categories: Microservices
 ---
 # Trong cái blog này, chúng ta hãy cùng nhau thảo luận qua 1 chút về microservice
-### Định nghĩa
+## Định nghĩa
 Trước tiên để có cái nhìn tổng quát về microservice là gì thì trước hết tôi xin phép được
 định nghĩa khái niệm Microservice là gì.
 <br/>
@@ -54,28 +54,27 @@ của nguyên lý này, kết hợp với ngành IT thì mềnh nghĩ có các �
 Về ưu điểm thì hầu hết sẽ liên quan đến việc code base của từng service do được chia ra nên rất nhỏ, dẫn đến những
 ưu điểm mà mình có thể kể tên như sau:
 
-> Code base nhỏ sẽ giúp cho việc đọc hiểu 1 service dễ dàng hơn, dễ dàng trong việc kiểm thử, bảo trì cũng như nâng cấp các tính năng hơn
+1. Code base nhỏ sẽ giúp cho việc đọc hiểu 1 service dễ dàng hơn, dễ dàng trong việc kiểm thử, bảo trì cũng như nâng cấp các tính năng hơn
 
-> Vì Microservice là độc lập sẽ giúp việc triển khai dễ dàng hơn, nó cũng cho phép nhiều team có thể tham gia vào việc phát triển
+2. Vì Microservice là độc lập sẽ giúp việc triển khai dễ dàng hơn, nó cũng cho phép nhiều team có thể tham gia vào việc phát triển
 
-> Bởi thì triển khai độc lập nó sẽ giúp việc scale 1 cách dễ dàng hơn, ít tốn tài nguyên hơn do chỉ cần scale những Microservices cần thiệt
+3. Bởi thì triển khai độc lập nó sẽ giúp việc scale 1 cách dễ dàng hơn, ít tốn tài nguyên hơn do chỉ cần scale những Microservices cần thiệt
 
-> Giảm thời gian downtime của hệ thống theo nguyên lý Isolated Failure.
+4. Giảm thời gian downtime của hệ thống theo nguyên lý Isolated Failure.
 
-> Dễ dàng thêm bớt các service mà không ảnh hưởng quá nhiều đến hệ thống
+5. Dễ dàng thêm bớt các service mà không ảnh hưởng quá nhiều đến hệ thống
 
 #### Nhược điểm
-> Không giống như monolithic, Microservices có thể bao gồm kiểu công nghệ, kiến trúc cũng như DB khác nhau dẫn đến việc
-> khó khăn trong việc hiểu toàn bộ kiến trúc, cũng như quản lý nếu như số lượng lên trên hàng trăm, nghìn service nhỏ.
+1. Không giống như monolithic, Microservices có thể bao gồm kiểu công nghệ, kiến trúc cũng như DB khác nhau dẫn đến việc khó khăn trong việc hiểu toàn bộ kiến trúc, cũng như quản lý nếu như số lượng lên trên hàng trăm, nghìn service nhỏ.
 
-> Việc thay đổi, cập nhật 1 service có khả năng ảnh hưởng đến các service khác gọi đến nó.
+2. Việc thay đổi, cập nhật 1 service có khả năng ảnh hưởng đến các service khác gọi đến nó.
 
-> Trong 1 số trường hợp tài nguyên để triển khai Microservices có thể sẽ tốn nhiều hơn so với Monolithic.
+3. Trong 1 số trường hợp tài nguyên để triển khai Microservices có thể sẽ tốn nhiều hơn so với Monolithic.
 
-> Khó khăn trong việc test ở môi trường phân tán
+4. Khó khăn trong việc test ở môi trường phân tán
 
-> Cần nhiều kiến thức để giải quyết các bài toàn liên quan đến độ trễ, cân bằng tải... dẫn đến nguy cơ giãn đoạn kết nối
-> giữa các service với nhau.
+5. Cần nhiều kiến thức để giải quyết các bài toàn liên quan đến độ trễ, cân bằng tải... dẫn đến nguy cơ giãn đoạn kết nối
+ giữa các service với nhau.
 
 ### Tổng kết
 Như những gì đã lướt qua bên trên có thể thấy, Microservice có rất nhiều ưu điểm cũng như khuyết điểm. Chúng ta đều có
