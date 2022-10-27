@@ -28,7 +28,7 @@ xây dựng Microservices.
 
 1. **Single responsibility principle.**
 > Nguyên tắc này chỉ ra rằng 1 lớp hoặc 1 mô-dun trong 1 ứng dụng chỉ nên có 1 và chỉ 1 trách nhiệm duy nhất.
-> Bất kỳ 1 service nào cũng không nên có nhiều hơn 1 trách nhiệm trong cùng 1 lúc.
+> Bất kỳ 1 service nào cũng không nên có nhiều hơn 1 trách nhiệm trong cùng 1 lúc. 
 
 2. **Modelled around business domain.**
 > Khi xây dựng 1 microservice, nó sẽ không bị giới hạn bỏi bất kỳ cộng nghệ hay database nào. hãy chọn những công nghệ,

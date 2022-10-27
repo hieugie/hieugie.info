@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "Sql "
+date:   2022-10-16 00:00:00
+categories: Interview_Question
+tags: Interview Question
+---
+
+# Index là gì
+Là 1 dạng data structure chứa các trường đã được đánh index và con trỏ (poiter) trỏ thẳng tới địa chỉ của bản ghi gốc trong bộ nhớ/bảng.
+Nó giúp tăng tốc độ câu truy vấn.
+
+Giả sử bạn có bảng với 5 triệu bản ghi, bạn sẽ cần khoảng 1 triệu block của ổ đĩa để lưu trữ chúng. Nếu không có index, bạn muốn truy xuất 1 bản ghi nào đó
+trong số 5 triệu bản ghi kia, bạn phải duyệt qua toàn bộ 1 triệu block ổ đĩa kia để tìm giá trị mòng muốn. 
+Với index bạn chỉ cần duyệt qua Log2(1000000) ~= 20 block của bộ nhớ để tìm ra thứ bạn cần. Nhanh hơn gấp khoảng 50.000 lần.
+
+# Khi nào nên đánh index
+1. Sử dụng index khi lấy ra lượng dữ liệu nhỏ hơn 15% dữ liệu trong bảng.
+2. Sử dụng index với các trường join để tăng hiệu năng
+3. Nếu sử dụng khóa ngoại thì nên đánh index cho khóa ngoại
+2. Sử dụng index với các điều kiện truy vấn xuất hiện trùng lặp nhiều và ta thường xuyên truy xuất theo điều kiện ngược lại
+
+# Các trường phù hợp để đánh index
+1. Toàn bộ các giá trị đều unique, hoặc lượng duplicate chiếm rất ít
+2. Khoảng giá trị phân bố rộng (đánh regular index)
+2. Khoảng giá trị phân bố hẹp (đánh bitmap index - giới tính)
+
+# Khi nào không nên đánh index
+1. Sử dụng với bảng có lượng dữ liệu ít.
+2. Sử dụng index với các điều kiện truy vấn xuất hiện trùng lặp nhiều và ta thường xuyên truy xuất theo điều kiện đó
+3. Sử dụng index với các bảng có tần xuất insert update bản ghi lớn
+4. Sử dụng index với các field có lượng lớn dữ liệu null.
+5. Sử dụng index với các field hay được update thường xuyên
+
+# Optimize query 
+1. Select đúng giá trị cần tìm thay vì where 
+2. nên sử dụng inner join thay vì where 
+3. sử dụng where thay vì having
+
+# Innodb engine vs myisam
+| InnoDB  |  Myisam |
+|---|---|
+| Hỗ trợ Row - Level Locking  | Hỗ trợ Table - Level Loking  |
+| Được thiết kế để đạt hiệu suất tối đa khi xử lý lượng dữ liệu lớn  | Được thiết kế cho nhu cầu về tốc độ (speed)   |
+| Hỗ trợ Foreign keys vì thế nên chúng ta gọi MySQL với InnoDB là RDBMS  | Không hỗ trợ Foreign keys vì thế nên chúng ta gọi MySQL với MyISAM là DBMS  |
+| Lưu trữ tables, indexes của nó trong 1 không gian bảng  | Lưu trữ tables, data, indexes của nó trong không gian đĩabằng cách sử dụng 3 file riêng biệt (table_name.FRM, table_name.MYD, table_name.MYI)   |
+| Từ version 5.5 trở về sau, InnoDB có hỗ trợ Full Text Search  | Hỗ trợ Full Text Search  |
+| Có hỗ trợ Transaction(hỗ trợ commit và rollback)  | Không hỗ trợ Transaction( auto commit - không hỗ trợ commit và rollback)  |
+
+# SQL vs NO SQL
+| SQL  |  NO SQL |
+|---|---|
+|Bảng với thiết kế cứng column và row | Document json, key-value pair, table with dynamic row and column, graph|
+|Oracle, MySQL, Microsoft SQL Server, and PostgreSQL|Document: MongoDB and CouchDB, Key-value: Redis and DynamoDB, Wide-column: Cassandra and HBase, Graph: Neo4j and Amazon Neptune|
+|General purpose|Document: general purpose, Key-value: large amounts of data with simple lookup queries, Wide-column: large amounts of data with predictable query patterns, Graph: analyzing and traversing relationships between connected data|
+|Vertical (scale-up with a larger server)|Horizontal (scale-out across commodity servers)|
+
+# benefits of NoSQL databases
+1. Flexible data models
+2. Horizontal scaling
+3. Fast queries
+4. Easy for developers
+
+# Pessimistic locking
+Khi edit 1 row, row đó sẽ bị lock ngay trước khi thay đổi giá trị thông qua việc gọi method setAttribute(), với quy trình như sau:
+1. Acquire lock.
+2. Update data.
+3. Release lock.
+
+Ưu điểm : Đây là cơ chế select for update, nó an toàn vì không bao giờ có thể cùng lúc xảy ra vieejec 2 transaction cùng thay đổi 1 row
+Nhược điểm: Có thể xảy ra deadlock, 
+
+# Optimistic locking
+Khi edit 1 row, row đó sẽ bị lock ngay trước khi thay đổi giá trị thông qua việc gọi method commit()
+Ưu điểm: nhiều transaction của thể cùng thao tác trên cùng 1 row

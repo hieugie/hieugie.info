@@ -26,3 +26,12 @@ Thì đây là câu trả lời mà mềnh biết:
 2. Support all type of bean scope
 3. Support internationalization
 4. Registers BeanFactoryPostProcessor and BeanPostProcessor at start up
+
+DRY (Don’t Repeat Yourself)
+This principle states that each small pieces of knowledge (code) may only occur exactly once in the entire system. This helps us to write scalable, maintainable and reusable code.
+
+KISS (Keep it simple, Stupid!)
+This principle states that try to keep each small piece of software simple and unnecessary complexity should be avoided. This helps us to write easy maintainable code.
+
+YAGNI (You ain't gonna need it)
+This principle states that always implement things when you actually need them never implements things before you need them.

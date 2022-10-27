@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Java core"
+date:   2022-10-16 00:00:00
+categories: Interview_Question
+tags: Interview Question
+---
+
+# Checked vs unchecked exception
+1. Checked exception được bắt trong quá trình compile time, Unchecked exception được bắt trong quá trình runtime
+2. Checked exception phải được xử lý bằng try catch hoặc throw, trong khi unchecked exception thì không cần xử lý cũng đc.
+3. Nếu một exception xảy ra mà người dùng có thể khắc phục được thì sử dụng checked exception,
+ còn nếu một exception khi xảy ra mà người dùng không thể làm gì để khắc phục thì sử dụng unchecked exception.
+4. Unchecked exception thường là những lỗi liên quan đến dữ liệu không đúng dẫn đến việc làm sai logic của chương trình

@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Spring"
+date:   2022-10-16 00:00:00
+categories: Interview_Question
+tags: Interview Question
+---
+
+# Bean là gì, vòng đời của bean
+Bean là các POJO được khởi tạo và quản lý bới Spring container
+Scope của bean: singleton(default), prototype, request, session, global session, 3 cái sau dành cho web
+
+# Spring container là gì
+Spring IOC Container là trái tim của Spring. Nó có nhiệm vụ quản lý vòng đời của bean, 
+Bao gồm khởi tạo, cấu hình, và tương tác giữa các bean trong ứng dụng Spring.
+
+## Bean Factory:
+1. Lazy load bean (Bean bạn cần sẽ không được khởi tạo khi chưa gọi hàm getBean)
+2. Only support singleton, prototype
+3. Do not support internationalization
+4. Do not register BeanFactoryPostProcessor and BeanPostProcessor at start up
+
+## Application Context
+1. Eager load bean (Bean bạn cần sẽ được khởi tạo trước mặc dù chưa gọi hàm getBean)
+2. Support all type of bean scope
+3. Support internationalization
+4. Registers BeanFactoryPostProcessor and BeanPostProcessor at start up
+
+# Dependency injection
+Dependency Injection (DI) trong Spring là một mẫu thiết kế được sử dụng để loại bỏ sự phụ thuộc giữa các mã chương trình.
+bảng cách sử dụng constructor base injection, setter injection, public field injection.
+
+Nên dùng constructor base injection vì dễ test hơn do có thể truyền các tham số có tính chất immutable(final)
